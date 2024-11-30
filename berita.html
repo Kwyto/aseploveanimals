@@ -1,0 +1,195 @@
+d<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="vendors/boostrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendors/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>berita</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top asep-navbar">
+      <div class="container navbar_pad">
+        <a class="navbar-brand fw-bold" href="#">Asep love animals</a>
+        <img src="img/logo.png" alt="Bootstrap" width="48" height="37" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-5 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link navbar_link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link" href="kategori.html">Kategori</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link active" href="berita.html">Berita</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link" href="kontak.html">Kontak</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link" href="about.html">Tentang Kami</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3 ps-5">
+            <a href="login.html" id="loginBtn" class="btn_navbar">Login</a>
+            <span id="userDisplay" style="display: none">Hi, <span id="username"></span> | <a href="#" id="logout">Logout</a></span>
+            <a href="favorit.html" target="_blank" style="text-decoration: none">
+              <i class="bx bx-heart" style="font-size: 24px; cursor: pointer"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+
+    <!-- banner -->
+    <section class="section banner_cargo">
+      <div class="container">
+        <div class="banner position-relative">
+          <img src="img/banner_2.png" alt="Banner Image" class="banner_img pt-4 pb-4" />
+          <div class="d-grid gap-2 d-md-block position-absolute" style="top: 70%; left: 75%; transform: translate(-50%, -50%)">
+            <a href="kategori.html" class="glow-button">Explore</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir navbar -->
+
+    <!-- card berita -->
+    <div class="container mt-2 text-center">
+      <p class="pt-5 asep-paragraf">Apa Yang Baru?</p>
+      <h2 class="text-center mb-5 asep-paragraf1" style="color: #083779">Lihat Beberapa Berita baru kami!</h2>
+
+      <!-- card 1 -->
+      <div class="card-grid container pb-5">
+        <div class="card shadow">
+          <img src="img/anjing.png" class="card-img-top img-custom" alt="Pomeranian Dog" />
+          <div class="card-body">
+            <span class="badge bg-primary mb-2">Pet knowledge</span>
+            <a href="#" onclick="window.location.href='isiberita.html?berita=4'">
+              <h5 class="card-title">Apa Itu Pomeranian? Cara Mengenali Anjing Pomeranian</h5>
+              <p class="card-text">Pomeranian, juga dikenal sebagai anjing Pom, selalu masuk dalam daftar hewan peliharaan paling lucu. Selain itu, anjing kecil ini dikenal karena sifatnya yang menggemaskan, cerdas...</p>
+            </a>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="card shadow">
+          <img src="img/kucing makan.png" class="card-img-top img-custom" alt="Dog Diet" />
+          <div class="card-body">
+            <span class="badge bg-primary mb-2">Pet knowledge</span>
+            <a href="#" onclick="window.location.href='isiberita.html?berita=2'">
+              <h5 class="card-title">Panduan Lengkap Pola Makan Kucing yang Sehat</h5>
+              <p class="card-text">Pola makan yang sehat sangat penting untuk menjaga kesehatan dan kesejahteraan kucing Anda. Sebagai hewan karnivora obligat, kucing membutuhkan protein hewani sebagai sumber utama nutrisi mereka....</p>
+            </a>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="card shadow">
+          <img src="img/kucing garuk.png" class="card-img-top img-custom" alt="Dog Diet" />
+          <div class="card-body">
+            <span class="badge bg-primary mb-2">Pet knowledge</span>
+            <a href="#" onclick="window.location.href='isiberita.html?berita=3'">
+              <h5 class="card-title">Mengapa Kucing Mencakar Perabotan</h5>
+              <p class="card-text">
+                Kucing mencakar perabotan bukan hanya karena kebiasaan atau perilaku destruktif, tetapi ada alasan biologis dan psikologis di balik tindakan tersebut. Salah satu alasan utamanya adalah untuk merawat cakarnya...
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- another card -->
+
+    <div class="card-grid container pb-5 mb-5 asep_card">
+      <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <!-- Ubah dari col-md-4 ke col-md-3 -->
+          <div class="card shadow">
+            <img src="img/miawwwwwww.png" class="card-img-top img-custom" alt="Pomeranian Dog" />
+            <div class="card-body">
+              <span class="badge bg-primary mb-2">Pet knowledge</span>
+              <a href="#" onclick="window.location.href='isiberita.html?berita=1'">
+                <h5 class="card-title">Benarkah Kucing Punya 9 Nyawa?</h5>
+                <p class="card-text">
+                  Ungkapan bahwa kucing memiliki sembilan nyawa adalah mitos yang telah berkembang selama berabad-abad, sering dikaitkan dengan kelincahan dan kemampuan bertahan hidup kucing dalam situasi sulit. Secara biologis, kucing
+                  memang memiliki kemampuan...
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <!-- Ubah dari col-md-4 ke col-md-3 -->
+          <div class="card shadow">
+            <img src="img/persia.png" class="card-img-top img-custom" alt="Dog Diet" />
+            <div class="card-body">
+              <span class="badge bg-primary mb-2">Pet knowledge</span>
+              <a href="#" onclick="window.location.href='isiberita.html?berita=5'">
+                <h5 class="card-title">Apa Itu Persia? Cara Mengenali kucing persia</h5>
+                <p class="card-text">
+                  Kucing Persia adalah salah satu ras kucing yang paling terkenal dan dihargai di dunia. Asal-usulnya dapat ditelusuri kembali ke wilayah Persia (sekarang Iran), dan sejak pertama kali diperkenalkan ke Eropa pada abad ke-17,
+                  kucing ini telah menjadi simbol...
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer pt-5">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>About Us</h4>
+          <p>Kami berdedikasi untuk membantu hewan menemukan rumah penuh kasih dan memberikan pengetahuan tentang perawatan hewan peliharaan.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="kategori.html">Pelihara hewan</a></li>
+            <li><a href="berita.html">Berita</a></li>
+            <li><a href="kontak.html">Kontak kami</a></li>
+            <li><a href="about.html">Tentang kami</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: info@petadoption.com</p>
+          <p>Phone: +62 815 3537 1462</p>
+          <p>Address: Jl.Abdul Hakim</p>
+        </div>
+
+        <div class="footer-section social-media">
+          <h4>Follow Us</h4>
+          <a href="#"><i class="bx bxl-facebook-square icon-facebook"></i></a>
+          <a href="#"><i class="bx bxl-instagram icon-instagram"></i></a>
+          <a href="#"><i class="bx bxl-twitter icon-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom pt-5 pb-0">
+        <img src="img/logo.png" alt="Logo" class="footer-logo" />
+        <p>&copy; 2024 Pet Adoption. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- akhir footer -->
+
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+    <script src="berita.js"></script>
+    <script src="vendors/boostrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

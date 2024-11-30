@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="vendors/boostrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendors/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Hewan</title>
+  </head>
+  <div>
+     <!-- navbar -->
+     <nav class="navbar navbar-expand-lg fixed-top asep-navbar">
+      <div class="container navbar_pad">
+        <a class="navbar-brand fw-bold" href="#">Asep love animals</a>
+        <img src="img/logo.png" alt="Bootstrap" width="48" height="37" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-5 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link navbar_link " aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link" href="kategori.html">Kategori</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link" href="berita.html">Berita</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link" href="kontak.html">Kontak</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link" href="about.html">Tentang Kami</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3 ps-5">
+            <a href="login.html" id="loginBtn" class="btn_navbar">Login</a>
+            <span id="userDisplay" style="display: none">Hi, <span id="username"></span> | <a href="#" id="logout">Logout</a></span>
+            <a href="favorit.html" target="_blank" style="text-decoration: none">
+              <i class="bx bx-heart" style="font-size: 24px; cursor: pointer"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+   
+
+    <!-- Customer Carousel -->
+    <div id="deskripsi1" class="bawah mt-3 pt-3">
+      <div class="container carousel_1 py-5" style="margin-top: 120px;">
+        <div class="row">
+          <!-- Bagian Gambar -->
+          <div class="col-lg-6">
+            <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/aripah bulet.png" class="d-block w-100" alt="Gambar Aripah 1" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/aripah kotak.png" class="d-block w-100" alt="Gambar Aripah 2" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/onde onde.png" class="d-block w-100" alt="Gambar Aripah 3" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+    
+            <!-- Thumbnail Gambar -->
+            <div class="d-flex justify-content-center mt-3">
+              <img
+                src="img/aripah (1).png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 1"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal1"
+                onclick="updateModalImage(this, 'modalImage1')"
+              />
+              <img
+                src="img/aripah marah part 2.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 2"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal1"
+                onclick="updateModalImage(this, 'modalImage1')"
+              />
+              <img
+                src="img/avatar.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 3"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal1"
+                onclick="updateModalImage(this, 'modalImage1')"
+              />
+            </div>
+          </div>
+    
+          <!-- Modal Gambar -->
+          <div class="modal fade" id="imageModal1" tabindex="-1" aria-labelledby="imageModalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body p-0">
+                  <img id="modalImage1" src="" alt="Expanded Image" class="img-fluid w-100" />
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Bagian Deskripsi -->
+          <div class="col-lg-6">
+            <h2 class="mb-4">🐾 Aripahh</h2>
+            <button onclick="window.location.href='Enquiry.html?form=3'" class="btn btn-primary mb-4 px-4 py-2">Enquire about Aripah</button>
+    
+            <table class="table table-bordered align-middle">
+              <tbody>
+                <tr>
+                  <th class="bg-light text-secondary">Gender</th>
+                  <td>Female</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Umur</th>
+                  <td>5 Bulan</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Ukuran</th>
+                  <td>Kecil</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Warna</th>
+                  <td>Coklat</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Vaccinated</th>
+                  <td>Yes ✅</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Lokasi</th>
+                  <td>Indonesia, Medan <br><i>Jl. Abdul Hakim</i></td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Published Date</th>
+                  <td>12-Nov-2024</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Informasi Hewan</th>
+                  <td>
+                    <p>
+                      Aripah adalah makhluk menggemaskan yang suka tidur dan selalu datang saat makanan tersedia,
+                      namun pergi ketika makanan habis. <em>(Aku pergi!)</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <!-- deskripsi 2 -->
+    <div id="deskripsi2" class="bawah mt-3 pt-3">
+      <div class="container carousel_2 py-5" style="margin-top: 120px;">
+        <div class="row">
+          <!-- Bagian Gambar -->
+          <div class="col-lg-6">
+            <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/kiple 1.png" class="d-block w-100" alt="Gambar Aripah 1" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/kiple 2.png" class="d-block w-100" alt="Gambar Aripah 2" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/kiple 3.png" class="d-block w-100" alt="Gambar Aripah 3" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+    
+            <!-- Thumbnail Gambar -->
+            <div class="d-flex justify-content-center mt-3">
+              <img
+                src="img/kiple 4.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 1"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal2"
+                onclick="updateModalImage(this, 'modalImage2')"
+              />
+              <img
+                src="img/kiple 5.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 2"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal2"
+                onclick="updateModalImage(this, 'modalImage2')"
+              />
+              <img
+                src="img/kiple 6.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 3"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal2"
+                onclick="updateModalImage(this, 'modalImage2')"
+              />
+            </div>
+          </div>
+    
+          <!-- Modal Gambar -->
+          <div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModalLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body p-0">
+                  <img id="modalImage2" src="" alt="Expanded Image" class="img-fluid w-100" />
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Bagian Deskripsi -->
+          <div class="col-lg-6">
+            <h2 class="mb-4">🐾 Kiplii</h2>
+            <button onclick="window.location.href='Enquiry.html?form=1'" class="btn btn-primary mb-4 px-4 py-2">Enquire about kipli</button>
+            <table class="table table-bordered align-middle">
+              <tbody>
+                <tr>
+                  <th class="bg-light text-secondary">Gender</th>
+                  <td>Male</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Umur</th>
+                  <td>6 Tahun</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Ukuran</th>
+                  <td>Gede</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Warna</th>
+                  <td>Brownies</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Vaccinated</th>
+                  <td>Yes ✅</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Lokasi</th>
+                  <td>Indonesia, Medan <br><i>Jl. Abdul Hakim</i></td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Published Date</th>
+                  <td>23-Nov-2024</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Informasi Hewan</th>
+                  <td>
+                    <p style="text-align: justify ;">
+                      Angie adalah kucing yang manis dan penuh kasih, siap menjadi teman setia di rumah baru. Dia memiliki kepribadian yang ramah dan suka bermain, membuatnya menjadi pilihan sempurna bagi keluarga yang mencari teman berbulu yang ceria. Tim Home2Home sangat senang bisa membantu Angie menemukan keluarga yang penuh kasih. 
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- custormer 3 -->
+     <!-- Customer Carousel -->
+     <div id="deskripsi3" class="bawah mt-3 pt-3">
+      <div class="container carousel_3 py-5" style="margin-top: 120px;">
+        <div class="row">
+          <!-- Bagian Gambar -->
+          <div class="col-lg-6">
+            <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/mimir 1.png" class="d-block w-100" alt="Gambar Aripah 1" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/mimir 2.png" class="d-block w-100" alt="Gambar Aripah 2" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/mimir 3.png" class="d-block w-100" alt="Gambar Aripah 3" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+    
+            <!-- Thumbnail Gambar -->
+            <div class="d-flex justify-content-center mt-3">
+              <img
+                src="img/mimir 4.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 1"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal3"
+                onclick="updateModalImage(this, 'modalImage3')"
+              />
+              <img
+                src="img/mimir 5.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 2"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal3"
+                onclick="updateModalImage(this, 'modalImage3')"
+              />
+              <img
+                src="img/mimir 6.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 3"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal3"
+                onclick="updateModalImage(this, 'modalImage3')"
+              />
+            </div>
+          </div>
+    
+          <!-- Modal Gambar -->
+          <div class="modal fade" id="imageModal3" tabindex="-1" aria-labelledby="imageModalLabel3" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body p-0">
+                  <img id="modalImage3" src="" alt="Expanded Image" class="img-fluid w-100" />
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Bagian Deskripsi -->
+          <div class="col-lg-6">
+            <h2 class="mb-4">🐾 mimirr</h2>
+            <button onclick="window.location.href='Enquiry.html?form=2'" class="btn btn-primary mb-4 px-4 py-2">Enquire about Mimir</button>
+
+    
+            <table class="table table-bordered align-middle">
+              <tbody>
+                <tr>
+                  <th class="bg-light text-secondary">Gender</th>
+                  <td>Male</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Umur</th>
+                  <td>8 Tahun</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Ukuran</th>
+                  <td>Gede</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Warna</th>
+                  <td>oren</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Vaccinated</th>
+                  <td>Yes ✅</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Lokasi</th>
+                  <td>Indonesia, Medan <br><i>Jl. Abdul Hakim</i></td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Published Date</th>
+                  <td>16-Nov-2024</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Informasi Hewan</th>
+                  <td>
+                    <p style="text-align: justify ;">
+                      Ginger adalah kucing yang penuh kasih dan ceria, siap untuk menjadi teman setia di rumah Anda. Ia sangat ramah dan suka berinteraksi dengan orang, membuatnya menjadi pilihan sempurna bagi siapa saja yang siap memberikan kasih sayang dan perawatan yang baik. 
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- deskripsi 4 -->
+     <!-- Customer Carousel -->
+     <div id="deskripsi4" class="bawah mt-3 pt-3">
+      <div class="container carousel_4 py-5" style="margin-top: 120px;">
+        <div class="row">
+          <!-- Bagian Gambar -->
+          <div class="col-lg-6">
+            <div id="carouselExampleControls4" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/gojo 1.png" class="d-block w-100" alt="Gambar Fluffy 1" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/gojo 2.png" class="d-block w-100" alt="Gambar Fluffy 2" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/gojo 3.png" class="d-block w-100" alt="Gambar Fluffy 3" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls4" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+    
+            <!-- Thumbnail Gambar -->
+            <div class="d-flex justify-content-center mt-3">
+              <img
+                src="img/gojo 4.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 1"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal4"
+                onclick="updateModalImage(this, 'modalImage4')"
+              />
+              <img
+                src="img/gojo 5.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 2"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal4"
+                onclick="updateModalImage(this, 'modalImage4')"
+              />
+              <img
+                src="img/gojo 6.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 3"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal4"
+                onclick="updateModalImage(this, 'modalImage4')"
+              />
+            </div>
+          </div>
+    
+          <!-- Modal Gambar -->
+          <div class="modal fade" id="imageModal4" tabindex="-1" aria-labelledby="imageModalLabel4" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body p-0">
+                  <img id="modalImage4" src="" alt="Expanded Image" class="img-fluid w-100" />
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Bagian Deskripsi -->
+          <div class="col-lg-6">
+            <h2 class="mb-4">🐾 🩵Todo & 🩷Georgia</h2>
+            <button onclick="window.location.href='Enquiry.html?form=4'" class="btn btn-primary mb-4 px-4 py-2">Enquire about 🩵Todo & 🩷Georgia</button>
+    
+            <table class="table table-bordered align-middle">
+              <tbody>
+                <tr>
+                  <th class="bg-light text-secondary">Gender</th>
+                  <td>Female/male</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Umur</th>
+                  <td>8 Bulan</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Ukuran</th>
+                  <td>Sedang</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Warna</th>
+                  <td>Putih/abu-abu</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Vaccinated</th>
+                  <td>Yes ✅</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Lokasi</th>
+                  <td>Indonesia, Jakarta <br><i>Jl. Melati</i></td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Published Date</th>
+                  <td>29-Nov-2024</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Informasi Hewan</th>
+                  <td>
+                    <p style="text-align: justify ;">
+                      Todo dan Georgia adalah saudara kandung kucing Ragdoll mix yang tak terpisahkan, menawarkan kombinasi kehangatan, keceriaan, dan keindahan. Georgia, kucing betina berbulu medium dengan pola tuxedo, mempesona dengan sifat anggun dan kebiasaannya menikmati sinar matahari. Sementara itu, Todo, si kucing berbulu abu-abu, meskipun awalnya pemalu, akan menunjukkan sisi ceria dan playful setelah merasa nyaman. Sebagai pasangan, mereka saling melengkapi dengan kebiasaan unik, termasuk trik lucu "leg-draping" bersama yang sulit untuk tidak disukai.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- deskripsi 5 -->
+     <!-- Customer Carousel -->
+     <div id="deskripsi5" class="bawah mt-3 pt-3">
+      <div class="container carousel_5 py-5" style="margin-top: 120px;">
+        <div class="row">
+          <!-- Bagian Gambar -->
+          <div class="col-lg-6">
+            <div id="carouselExampleControls5" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/ruby 1.png" class="d-block w-100" alt="Gambar Todo dan Georgia 1" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/ruby 2.png" class="d-block w-100" alt="Gambar Todo dan Georgia 2" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/ruby 3.png" class="d-block w-100" alt="Gambar Todo dan Georgia 3" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls5" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls5" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+    
+            <!-- Thumbnail Gambar -->
+            <div class="d-flex justify-content-center mt-3">
+              <img
+                src="img/ruby.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 1"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal5"
+                onclick="updateModalImage(this, 'modalImage5')"
+              />
+              <img
+                src="img/ruby 4.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 2"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal5"
+                onclick="updateModalImage(this, 'modalImage5')"
+              />
+              <img
+                src="img/ruby 5.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 3"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal5"
+                onclick="updateModalImage(this, 'modalImage5')"
+              />
+            </div>
+          </div>
+    
+          <!-- Modal Gambar -->
+          <div class="modal fade" id="imageModal5" tabindex="-1" aria-labelledby="imageModalLabel5" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body p-0">
+                  <img id="modalImage5" src="" alt="Expanded Image" class="img-fluid w-100" />
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Bagian Deskripsi -->
+          <div class="col-lg-6">
+            <h2 class="mb-4">🐾 Ruby</h2>
+            <button onclick="window.location.href='Enquiry.html?form=5'" class="btn btn-primary mb-4 px-4 py-2">Enquire about Ruby</button>
+    
+            <table class="table table-bordered align-middle">
+              <tbody>
+                <tr>
+                  <th class="bg-light text-secondary">Gender</th>
+                  <td>Male</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Umur</th>
+                  <td>2 Tahun</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Ukuran</th>
+                  <td>Sedang</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Warna</th>
+                  <td>Coklat</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Vaccinated</th>
+                  <td>Yes ✅</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Lokasi</th>
+                  <td>Indonesia, Medan <br><i>Jl. Abdul Hakim</i></td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Published Date</th>
+                  <td>4-Oct-2024</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Informasi Hewan</th>
+                  <td>
+                    <p style="text-align: justify;">
+                      Ruby adalah anjing berukuran sedang yang cantik dan penuh energi. Dia sangat menikmati bermain dengan saudaranya, Rufus, terutama dalam permainan kejar-kejaran di lapangan terbuka. Ruby memiliki sifat yang sedikit pemalu pada awalnya, tetapi dia cepat merasa nyaman dan senang berada di dekat orang-orang.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- deskripsi 6 -->
+    <div id="deskripsi6" class="bawah mt-3 pt-3">
+      <div class="container carousel_6 py-5" style="margin-top: 120px;">
+        <div class="row">
+          <!-- Bagian Gambar -->
+          <div class="col-lg-6">
+            <div id="carouselExampleControls6" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/malek 1.png" class="d-block w-100" alt="Gambar Marley dan Mia 1" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/malek 2.png" class="d-block w-100" alt="Gambar Marley dan Mia 2" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/malek 3.png" class="d-block w-100" alt="Gambar Marley dan Mia 3" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls6" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls6" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+    
+            <!-- Thumbnail Gambar -->
+            <div class="d-flex justify-content-center mt-3">
+              <img
+                src="img/malek 1.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 1"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal6"
+                onclick="updateModalImage(this, 'modalImage6')"
+              />
+              <img
+                src="img/malek 4.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 2"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal6"
+                onclick="updateModalImage(this, 'modalImage6')"
+              />
+              <img
+                src="img/malek 3.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 3"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal6"
+                onclick="updateModalImage(this, 'modalImage6')"
+              />
+            </div>
+          </div>
+    
+          <!-- Modal Gambar -->
+          <div class="modal fade" id="imageModal6" tabindex="-1" aria-labelledby="imageModalLabel6" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body p-0">
+                  <img id="modalImage6" src="" alt="Expanded Image" class="img-fluid w-100" />
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Bagian Deskripsi -->
+          <div class="col-lg-6">
+            <h2 class="mb-4">🐾 Marlek</h2>
+            <button onclick="window.location.href='Enquiry.html?form=6'" class="btn btn-primary mb-4 px-4 py-2">Enquire about Marlek</button>
+            <table class="table table-bordered align-middle">
+              <tbody>
+                <tr>
+                  <th class="bg-light text-secondary">Gender</th>
+                  <td>Female</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Umur</th>
+                  <td>4 Tahun</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Ukuran</th>
+                  <td>Kecil</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Warna</th>
+                  <td>Hitam</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Vaccinated</th>
+                  <td>Yes ✅</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Lokasi</th>
+                  <td>Indonesia, Medan <br><i>Jl. Abdul Hakim</i></td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Published Date</th>
+                  <td>7-Oct-2024</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Informasi Hewan</th>
+                  <td>
+                    <p style="text-align: justify;">
+                      Marley dan Mia adalah pasangan kucing yang manis dan tak terpisahkan. Mereka sedang mencari rumah yang tenang dan penuh kasih dengan pemilik yang sering ada di rumah untuk menikmati kehadiran mereka. Meskipun mereka baik-baik saja saat ibu asuh mereka bekerja, Marley dan Mia benar-benar bersinar pada hari libur, mengikuti langkah-langkahnya dengan penuh kasih setia. Pasangan ini adalah teman yang sempurna untuk memberikan kebahagiaan dan cinta dalam rumah yang mereka tempati!
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- deskripsi 7 -->
+     <!-- Customer Carousel -->
+     <div id="deskripsi7" class="bawah mt-3 pt-3">
+      <div class="container carousel_7 py-5" style="margin-top: 120px;">
+        <div class="row">
+          <!-- Bagian Gambar -->
+          <div class="col-lg-6">
+            <div id="carouselExampleControls7" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/dex 1.png" class="d-block w-100" alt="Gambar Charlie 1" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/dex 2.png" class="d-block w-100" alt="Gambar Charlie 2" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/dex3.png" class="d-block w-100" alt="Gambar Charlie 3" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls7" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls7" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+    
+            <!-- Thumbnail Gambar -->
+            <div class="d-flex justify-content-center mt-3">
+              <img
+                src="img/dex 4.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 1"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal7"
+                onclick="updateModalImage(this, 'modalImage7')"
+              />
+              <img
+                src="img/dex 5.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 2"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal7"
+                onclick="updateModalImage(this, 'modalImage7')"
+              />
+              <img
+                src="img/dex 6.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 3"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal7"
+                onclick="updateModalImage(this, 'modalImage7')"
+              />
+            </div>
+          </div>
+    
+          <!-- Modal Gambar -->
+          <div class="modal fade" id="imageModal7" tabindex="-1" aria-labelledby="imageModalLabel7" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body p-0">
+                  <img id="modalImage7" src="" alt="Expanded Image" class="img-fluid w-100" />
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Bagian Deskripsi -->
+          <div class="col-lg-6">
+            <h2 class="mb-4">🐾 Dexter 😝</h2>
+            <button onclick="window.location.href='Enquiry.html?form=7'" class="btn btn-primary mb-4 px-4 py-2">Enquire about Dexter 😝</button>
+            <table class="table table-bordered align-middle">
+              <tbody>
+                <tr>
+                  <th class="bg-light text-secondary">Gender</th>
+                  <td>Male</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Umur</th>
+                  <td>3 Tahun</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Ukuran</th>
+                  <td>Gede/td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Warna</th>
+                  <td>Setengah hitam</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Vaccinated</th>
+                  <td>Yes ✅</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Lokasi</th>
+                  <td>Indonesia, Surabaya <br><i>Jl. Panglima Sudirman</i></td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Published Date</th>
+                  <td>18-Oct-2024</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Informasi Hewan</th>
+                  <td>
+                    <p style="text-align: justify;">
+                      Kenalkan Dex Sahabat Baru Anda yang Aktif dan Pencinta Bermain!        
+                      Dex adalah anjing campuran Border Collie x Poodle berusia 3 tahun yang penuh energi, kasih sayang, dan loyalitas. Dia sangat cepat menjalin ikatan dengan manusia dan suka menjadi teman setia. Dex menyukai petualangan seperti bermain lempar tangkap bola, diikuti dengan istirahat nyaman di sisi Anda. Dengan semangat dan cinta yang besar, Dex siap menjadi bagian dari keluarga penuh kasih! berjalan-jalan dan bermain dengan bola. Charlie akan menjadi teman setia yang penuh cinta di rumah barunya.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- deskrisi 8 -->
+     <!-- Customer Carousel -->
+     <div id="deskripsi8" class="bawah mt-3 pt-3">
+      <div class="container carousel_8 py-5" style="margin-top: 120px;">
+        <div class="row">
+          <!-- Bagian Gambar -->
+          <div class="col-lg-6">
+            <div id="carouselExampleControls8" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/riley 1.png" class="d-block w-100" alt="Gambar Dex 1" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/riley 2.png" class="d-block w-100" alt="Gambar Dex 2" />
+                </div>
+                <div class="carousel-item">
+                  <img src="img/riley 3.png" class="d-block w-100" alt="Gambar Dex 3" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls8" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls8" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+    
+            <!-- Thumbnail Gambar -->
+            <div class="d-flex justify-content-center mt-3">
+              <img
+                src="img/roley 4.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 1"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal8"
+                onclick="updateModalImage(this, 'modalImage8')"
+              />
+              <img
+                src="img/riley 5.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 2"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal8"
+                onclick="updateModalImage(this, 'modalImage8')"
+              />
+              <img
+                src="img/riley 1.png"
+                class="img-thumbnail mx-1"
+                alt="Thumbnail 3"
+                style="cursor: pointer; width: 100px; height: 100px;"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal8"
+                onclick="updateModalImage(this, 'modalImage8')"
+              />
+            </div>
+          </div>
+    
+          <!-- Modal Gambar -->
+          <div class="modal fade" id="imageModal8" tabindex="-1" aria-labelledby="imageModalLabel8" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body p-0">
+                  <img id="modalImage8" src="" alt="Expanded Image" class="img-fluid w-100" />
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Bagian Deskripsi -->
+          <div class="col-lg-6">
+            <h2 class="mb-4">🐾 Riley</h2>
+            <button onclick="window.location.href='Enquiry.html?form=8'" class="btn btn-primary mb-4 px-4 py-2">Enquire about Dexter 😝</button>
+            <table class="table table-bordered align-middle">
+              <tbody>
+                <tr>
+                  <th class="bg-light text-secondary">Gender</th>
+                  <td>Male</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Umur</th>
+                  <td>7 Tahun</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Ukuran</th>
+                  <td>Besar</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Warna</th>
+                  <td>Coklat,hitam</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Vaccinated</th>
+                  <td>Yes ✅</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Lokasi</th>
+                  <td>Indonesia, Jakarta <br><i>Jl. Sudirman</i></td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Published Date</th>
+                  <td>28-Oct-2024</td>
+                </tr>
+                <tr>
+                  <th class="bg-light text-secondary">Informasi Hewan</th>
+                  <td>
+                    <p style="text-align: justify;">
+                      Riley adalah anjing campuran German Shepherd x Husky yang baru saja bergabung dengan perawatan Ark. Riley adalah anjing yang cantik dan penuh kasih, yang membutuhkan seseorang yang dapat memberinya perhatian dan cinta. Dia sangat baik dengan anak-anak dan anjing lain, meskipun memerlukan pengenalan yang lambat jika bertemu dengan kucing. Pemilik baru Riley diharapkan memiliki pengalaman dengan kedua ras ini, karena mereka memiliki kebutuhan yang spesifik. Selain itu, pagar tinggi yang aman sangat diperlukan untuk menjaga keselamatan dan kenyamanannya. Riley siap untuk menemukan keluarga yang penuh kasih yang dapat memberinya rumah yang nyaman.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+<!-- akhir carousel -->
+
+<!-- hewan -->
+<div class="container mb-4">
+  <p class="pt-5 asep-paragraf">Apa Yang Baru?</p>
+  <h2 class="text-center mb-5 asep-paragraf1" style="color: #083779">Liat Beberapa Hewan kami</h2>
+  <div id="cards-container" class="row container">
+    <!-- card 1 -->
+    <div id="card1" class="col-md-3">
+      <div class="pet-card shadow-sm">
+        <div class="love-icon-container">
+          <button class="btn-love" onclick="toggleLove(this, '5', ' Ruby', 'img/ruy awal.png')">
+            <i class="bx bxs-heart"></i>
+          </button>
+        </div>
+        <img src="img/ruy awal.png" alt="Alaskan Malamute Grey" />
+        <div class="card-body">
+          <h5 class="card-title">- Ruby</h5>
+          <p class="card-text">Gender: Male | Umur: 2 Tahun</p>
+          <ul class="list-unstyled">
+            <li><strong>Status:</strong> Tersedia</li>
+            <li><strong>Lokasi:</strong> Jl. Abdul Hakim</li>
+            <li><strong>Contact:</strong> 0815-3537-1462</li>
+          </ul>
+          <a href="#" onclick="window.location.href='hewan.html?deskripsi=5'" class="adopt-link btn btn-primary mt-3">Adopt Me</a>
+        </div>
+      </div>
+    </div>
+        <!-- card 2 -->
+        <div id="card2" class="col-md-3">
+          <div class="pet-card shadow-sm">
+            <div class="love-icon-container">
+              <button class="btn-love" onclick="toggleLove(this, '2', 'kipli', 'img/anggi.png')">
+                <i class="bx bxs-heart"></i>
+              </button>
+            </div>
+            <img src="img/anggi.png" alt="Alaskan Malamute Grey" />
+            <div class="card-body">
+              <h5 class="card-title">- Kipli</h5>
+              <p class="card-text">Gender: Male | Umur: 6 Tahun</p>
+              <ul class="list-unstyled">
+                <li><strong>Status:</strong> Tersedia</li>
+                <li><strong>Lokasi:</strong> Jl. Abdul Hakim</li>
+                <li><strong>Contact:</strong> 0815-3537-1462</li>
+              </ul>
+              <a href="#" onclick="window.location.href='hewan.html?deskripsi=2'" class="adopt-link btn btn-primary mt-3">Adopt Me</a>
+            </div>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div id="card3" class="col-md-3">
+          <div class="pet-card shadow-sm">
+            <div class="love-icon-container">
+              <button class="btn-love" onclick="toggleLove(this, '7', ' Dexter 😝', 'img/melet.png')">
+                <i class="bx bxs-heart"></i>
+              </button>
+            </div>
+            <img src="img/melet.png" alt="Alaskan Malamute Grey" />
+            <div class="card-body">
+              <h5 class="card-title">- Dexter 😝</h5>
+              <p class="card-text">Gender: Male | Umur: 3 Tahun</p>
+              <ul class="list-unstyled">
+                <li><strong>Status:</strong> Tersedia</li>
+                <li><strong>Lokasi:</strong> Jl. Abdul Hakim</li>
+                <li><strong>Contact:</strong> 0815-3537-1462</li>
+              </ul>
+              <a href="#" onclick="window.location.href='hewan.html?deskripsi=7'" class="adopt-link btn btn-primary mt-3">Adopt Me</a>
+            </div>
+          </div>
+        </div>
+        <!-- card 4 -->
+        <div id="card4" class="col-md-3">
+          <div class="pet-card shadow-sm">
+            <div class="love-icon-container">
+              <button class="btn-love" onclick="toggleLove(this, '4', '🩵Todo & 🩷Georgia', 'img/todo.png')">
+                <i class="bx bxs-heart"></i>
+              </button>
+            </div>
+            <img src="img/todo.png" alt="Alaskan Malamute Grey" />
+            <div class="card-body">
+              <h5 class="card-title">- 🩵Todo & 🩷Georgia</h5>
+              <p class="card-text">Gender: Male | Umur: 8 Bulan</p>
+              <ul class="list-unstyled">
+                <li><strong>Status:</strong> Available</li>
+                <li><strong>Lokasi:</strong> Jl. Abdul Hakim</li>
+                <li><strong>Contact:</strong> 0815-3537-1462</li>
+              </ul>
+              <a href="#" onclick="window.location.href='hewan.html?deskripsi=4'" class="adopt-link btn btn-primary mt-3">Adopt Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- akhir card -->
+
+     <!-- footer -->
+     <footer class="footer pt-5">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h4>About Us</h4>
+            <p>Kami berdedikasi untuk membantu hewan menemukan rumah penuh kasih dan memberikan pengetahuan tentang perawatan hewan peliharaan.</p>
+          </div>
+  
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="kategori.html">Pelihara hewan</a></li>
+              <li><a href="berita.html">Berita</a></li>
+              <li><a href="kontak.html">Kontak kami</a></li>
+              <li><a href="about.html">Tentang kami</a></li>
+              
+
+            </ul>
+          </div>
+  
+          <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>Email: info@petadoption.com</p>
+            <p>Phone: +62 815 3537 1462</p>
+            <p>Address: Jl. Abdul Hakim</p>
+          </div>
+  
+          <div class="footer-section social-media">
+            <h4>Follow Us</h4>
+            <a href="#"><i class="bx bxl-facebook-square icon-facebook"></i></a>
+            <a href="#"><i class="bx bxl-instagram icon-instagram"></i></a>
+            <a href="#"><i class="bx bxl-twitter icon-twitter"></i></a>
+          </div>
+        </div>
+  
+        <div class="footer-bottom pt-5 pb-0">
+          <img src="img/logo.png" alt="Logo" class="footer-logo" />
+          <p>&copy; 2024 Pet Adoption. All rights reserved.</p>
+        </div>
+      </footer>
+      <!-- akhir footer -->
+
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+    <script src="vendors/boostrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

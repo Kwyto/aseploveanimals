@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="vendors/boostrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendors/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>About</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top asep-navbar">
+      <div class="container navbar_pad">
+        <a class="navbar-brand fw-bold" href="#">Asep love animals</a>
+        <img src="img/logo.png" alt="Bootstrap" width="48" height="37" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-5 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link navbar_link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link" href="kategori.html">Kategori</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link" href="berita.html">Berita</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link" href="kontak.html">Kontak</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link active" href="about.html">Tentang Kami</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3 ps-5">
+            <a href="login.html" id="loginBtn" class="btn_navbar">Login</a>
+            <span id="userDisplay" style="display: none">Hi, <span id="username"></span> | <a href="#" id="logout">Logout</a></span>
+            <a href="favorit.html" target="_blank" style="text-decoration: none">
+              <i class="bx bx-heart" style="font-size: 24px; cursor: pointer"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+
+    <header class="container-fluid about_us">
+      <h1>Tentang kami</h1>
+      <p>Pelajari lebih lanjut tentang siapa kami dan apa yang kami lakukan</p>
+    </header>
+
+    <main class="container tentang-container" id="tentang-section">
+      <!-- Section: Our Mission -->
+      <section class="Tentang">
+        <h2>Misi kami</h2>
+        <p style="text-align: justify">
+          Kami berkomitmen untuk menyediakan rumah penuh kasih sayang bagi hewan yang membutuhkan dan mendidik masyarakat tentang perawatan hewan peliharaan yang bertanggung jawab. Tujuan kami adalah memberikan dampak positif pada kehidupan
+          hewan peliharaan dan pemiliknya di masa depan dengan menghubungkan dan mempromosikan mereka kesejahteraan hewan.
+        </p>
+      </section>
+
+      <!-- Section: Our Story -->
+      <section class="Tentang">
+        <h2>Kisah kami</h2>
+        <p style="text-align: justify">
+          Didirikan pada tahun 2020, kami memulai dengan sekelompok kecil pecinta hewan yang ingin membuat perbedaan. Selama bertahun-tahun, kami telah berkembang menjadi organisasi berbasis komunitas dengan relawan, pendukung, dan mitra
+          yang berdedikasi. Saat ini, kami telah membantu ribuan hewan peliharaan menemukan rumah baru dan mendidik banyak orang tentang cara merawat hewan mereka dengan lebih baik.
+        </p>
+      </section>
+
+      <!-- Section: Our Team -->
+      <section class="team">
+        <h2 class="mb-5">Team kami</h2>
+        <div class="team-members">
+          <div class="team-member">
+            <img src="img/habibi.png" alt="Team Member 1" />
+            <h3>Arief</h3>
+            <p style="text-align: justify">Founder & CEO</p>
+          </div>
+          <div class="team-member">
+            <img src="img/nicolas.jpeg" alt="Team Member 2" />
+            <h3>Nicolas</h3>
+            <p style="text-align: justify">Operations Manager</p>
+          </div>
+          <div class="team-member">
+            <img src="img/doni.jpeg" alt="Team Member 3" />
+            <h3>Doni</h3>
+            <p style="text-align: justify">Animal Care Specialist</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Get Involved -->
+      <section class="Tentang mt-5">
+        <h2>Bagaimana Anda Dapat Membantu?</h2>
+        <p style="text-align: justify">
+          Dukungan Anda sangat penting untuk pekerjaan kami. Ada banyak cara untuk berkontribusi, seperti mengadopsi hewan peliharaan, menjadi sukarelawan, atau berdonasi. Setiap upaya kecil membantu kita membuat perbedaan dalam kehidupan
+          hewan dan membawa kita lebih dekat ke dunia di mana setiap hewan peliharaan memiliki rumah yang penuh kasih sayang.
+        </p>
+        <button class="btn btn_about" type="button" onclick="window.location.href='https://saweria.co/en'">Donate</button>
+      </section>
+
+      <!-- Section: Location -->
+      <section class="Tentang mt-5">
+        <h2>Lokasi kami</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.1233191003803!2d98.64544357567576!3d3.559059450494683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312fe716b1a5dd%3A0x7583a2463ba6fc7e!2sJl.%20Abdul%20Hakim%2C%20Kota%20Medan%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1732403483531!5m2!1sid!2sid"
+          width="1000"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer pt-5">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>About Us</h4>
+          <p>Kami berdedikasi untuk membantu hewan menemukan rumah penuh kasih dan memberikan pengetahuan tentang perawatan hewan peliharaan.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="kategori.html">Pelihara hewan</a></li>
+            <li><a href="berita.html">Berita</a></li>
+            <li><a href="kontak.html">Kontak kami</a></li>
+            <li><a href="about.html">Tentang kami</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: info@petadoption.com</p>
+          <p>Phone: +62 815 3537 1462</p>
+          <p>Address: Jl. Abdul hakim</p>
+        </div>
+
+        <div class="footer-section social-media">
+          <h4>Follow Us</h4>
+          <a href="#"><i class="bx bxl-facebook-square icon-facebook"></i></a>
+          <a href="#"><i class="bx bxl-instagram icon-instagram"></i></a>
+          <a href="#"><i class="bx bxl-twitter icon-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom pt-5 pb-0">
+        <img src="img/logo.png" alt="Logo" class="footer-logo" />
+        <p>&copy; 2024 Pet Adoption. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- akhir footer -->
+
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+    <script src="vendors/boostrap/js/bootstrap.bundle.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+  </body>
+</html>

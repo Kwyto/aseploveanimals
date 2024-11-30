@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="vendors/boostrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendors/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Favorit</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top asep-navbar">
+      <div class="container navbar_pad">
+        <a class="navbar-brand fw-bold" href="#">Asep love animals</a>
+        <img src="img/logo.png" alt="Bootstrap" width="48" height="37" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-5 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link navbar_link " aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link" href="kategori.html">Kategori</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link" href="berita.html">Berita</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link" href="kontak.html">Kontak</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar_link" href="about.html">Tentang Kami</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3 ps-5">
+            <a href="login.html" id="loginBtn" class="btn_navbar">Login</a>
+            <span id="userDisplay" style="display: none">Hi, <span id="username"></span> | <a href="#" id="logout">Logout</a></span>
+            <a href="favorit.html" target="_blank" style="text-decoration: none">
+              <i class="bx bx-heart" style="font-size: 24px; cursor: pointer"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+
+    <div class="container my-5 custom-spacing">
+      <h1 class="mb-4">My Favourites</h1>
+      <div id="favorites" class="row">
+        <!-- Favourites will be populated here -->
+      </div>
+    </div>
+
+    <footer class="footer pt-5">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>About Us</h4>
+          <p>Kami berdedikasi untuk membantu hewan menemukan rumah penuh kasih dan memberikan pengetahuan tentang perawatan hewan peliharaan.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="kategori.html">Pelihara hewan</a></li>
+            <li><a href="berita.html">Berita</a></li>
+            <li><a href="kontak.html">Kontak kami</a></li>
+            <li><a href="about.html">Tentang kami</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: info@petadoption.com</p>
+          <p>Phone: +62 815 3537 1462</p>
+          <p>Address: Jl. Abdul hakim</p>
+        </div>
+
+        <div class="footer-section social-media">
+          <h4>Follow Us</h4>
+          <a href="#"><i class="bx bxl-facebook-square icon-facebook"></i></a>
+          <a href="#"><i class="bx bxl-instagram icon-instagram"></i></a>
+          <a href="#"><i class="bx bxl-twitter icon-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom pt-5 pb-0">
+        <img src="img/logo.png" alt="Logo" class="footer-logo" />
+        <p>&copy; 2024 Pet Adoption. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- akhir footer -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const favoritesContainer = document.getElementById('favorites');
+        const loves = JSON.parse(localStorage.getItem('lovedPets')) || [];
+
+        if (loves.length === 0) {
+          favoritesContainer.innerHTML = '<p>No favorites added yet.</p>';
+          return;
+        }
+
+        loves.forEach((pet) => {
+          const card = document.createElement('div');
+          card.className = 'col-md-3';
+          card.innerHTML = `
+            <div class="pet-card shadow-sm">
+                <img src="${pet.imgSrc}" alt="${pet.name}" />
+                <div class="card-body">
+                    <h5 class="card-title">${pet.name}</h5>
+                    <!-- Tombol remove favorit -->
+                    <button class="btn btn-danger mt-3 btn-block" onclick="removeFavorite('${pet.id}')">Remove</button>
+                    <!-- Link untuk menuju halaman deskripsi pet -->
+                    <a href="hewan.html?deskripsi=${pet.id}" class="adopt-link btn btn-primary mt-3 btn-block">Adopt Me</a>
+                </div>
+            </div>
+        `;
+          favoritesContainer.appendChild(card);
+        });
+      });
+
+      function removeFavorite(id) {
+        let loves = JSON.parse(localStorage.getItem('lovedPets')) || [];
+        loves = loves.filter((pet) => pet.id !== id);
+        localStorage.setItem('lovedPets', JSON.stringify(loves));
+        location.reload();
+      }
+    </script>
+
+    <script src="login.js"></script>
+  </body>
+</html>

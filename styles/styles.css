@@ -1,0 +1,828 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary-color: #ffba5a;
+  --dark-color: #0f0f0f;
+  --gray-color: gray;
+  --h1-font-size: 40px;
+  --h2-font-size: 32px;
+  --small-font-size: 14px;
+}
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-size: 700;
+  color: #222;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
+
+/* navbar */
+
+  .navbar .nav-item .nav-link :hover,
+  .navbar .nav-item .nav-link.active {
+    color: var(--primary-color);
+  }
+
+.asep-navbar {
+  background-color: #ffeed3;
+  font-weight: 600;
+  padding: 15px 20px;
+  transition: padding 0.3s ease-in-out;
+}
+
+.navbar_pad {
+  padding: 18px;
+}
+
+.navbar_link {
+  position: relative;
+  color: #767575;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+.navbar_link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar_link:hover {
+  color: var(--dark-color);
+}
+.navbar_link:hover::after {
+  width: 100%;
+}
+
+.btn_navbar {
+  background: linear-gradient(90deg, #ff8a00 0%, #da1b60 100%);
+  border: none;
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.btn_navbar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(218, 27, 96, 0.5);
+}
+
+/* akhir navbar */
+/* Section Hero */
+#hero {
+  background-image: url('../img/banner_1.png'); 
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  overflow: hidden;
+  position: relative;
+  color: #152246;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+#hero h1 {
+  z-index: 2;
+  padding: 15px 0;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #152246;
+  animation: fadeInDown 1.5s ease-in-out;
+}
+
+#hero p {
+  z-index: 2;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #555;
+  padding: 10px 0;
+  max-width: 600px;
+  text-align: justify;
+  font-weight: 500;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Animasi */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tombol Explore */
+.glow-button {
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.glow-button::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.glow-button::before {
+  content: '';
+  background: linear-gradient(45deg, #791717, #0b192c, #1e3e62, #ff6500);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.glow-button:hover::before {
+  opacity: 1;
+}
+
+.glow-button:active::after {
+  background: transparent;
+}
+
+.glow-button:active {
+  color: #cfcfcf;
+  font-weight: bold;
+}
+/* akhir section */
+
+/* card kucing */
+.asep-paragraf {
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.asep-paragraf1 {
+  position: relative;
+  display: inline-block;
+}
+
+.asep-paragraf1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50%;
+  height: 4px;
+  background-color: #083779;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.asep-paragraf1:hover::after {
+  width: 100%;
+}
+
+/* real card */
+/* Gaya Umum untuk Kartu */
+.pet-card,
+.card {
+  border-radius: 10px;
+  padding: 15px;
+  text-align: left; 
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pet-card:hover,
+.card:hover {
+  transform: translateY(-5px);
+  transform: scale(1.06);
+}
+
+/* Gaya Gambar */
+.pet-card img,
+.pet-image,
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.pet-content {
+  padding: 15px; 
+}
+
+.pet-image {
+  height: 200px;
+}
+
+.img-custom {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 7px;
+  display: block;
+}
+
+/* Gaya Judul dan Deskripsi */
+.pet-title,
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: left; 
+}
+
+.pet-description,
+.card-text {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  text-align: left; 
+}
+
+.pet-category {
+  color: #1c9ab6;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: left; 
+}
+
+/* Gaya Tombol */
+.adopt-link {
+  text-decoration: none;
+  color: #fff;
+  background-color: #083779;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.adopt-link:hover {
+  background-color: #117a8b;
+}
+
+
+.badge {
+  display: inline-block;
+  background-color: #1c9ab6;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+/* Layout dan Responsivitas */
+.container {
+  padding: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.about-section {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Gaya Teks */
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-dark:hover {
+  color: #1c9ab6;
+}
+
+/* card berita */
+/* Card Grid Styling */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+  justify-items: center; 
+}
+
+/* Card Styling */
+.card {
+  border-radius: 10px; 
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek hover pada card */
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+}
+
+/* Styling untuk gambar card */
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 4px solid #f1f1f1; 
+  transition: transform 0.3s ease; 
+}
+
+/* Efek zoom pada gambar saat hover */
+.card:hover .card-img-top {
+  transform: scale(1.05); 
+}
+
+/* Styling untuk badan card */
+.card-body {
+  padding: 20px;
+  text-align: left;
+  color: #333;
+}
+
+/* Badge Styling */
+.badge {
+  background-color: #1c9ab6;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 25px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.badge:hover {
+  background-color: #117a8b; 
+}
+
+/* Styling untuk judul card */
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.card-title:hover {
+  color: #1c9ab6; 
+}
+
+/* Styling untuk teks dalam card */
+.card-text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.card-text:hover {
+  color: #1c9ab6; 
+}
+
+/* Styling link tanpa underline dan dengan perubahan warna */
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-dark:hover {
+  color: #1c9ab6; 
+}
+
+
+.banner_cargo {
+  margin-top: 140px;
+}
+
+/* footer */
+.footer {
+  background-color: #ffeed3;
+  color: #fff;
+  padding: 40px 0;
+  font-family: 'poppins', sans-serif;
+  border-radius: 16px;
+}
+
+.footer-logo {
+  padding-bottom: 10px;
+  width: 50px;
+  height: auto;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px 20px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+  font-size: 14px;
+  color: #6b6a6a;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a:hover {
+  color: #1c9ab6;
+}
+
+.footer-section a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  transition: opacity 0.3s;
+}
+
+.footer-section a img:hover {
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #000000;
+}
+
+.icon-facebook {
+  font-size: 40px;
+}
+
+.icon-instagram {
+  font-size: 40px;
+}
+
+.icon-twitter {
+  font-size: 40px;
+}
+/* akhir footer */
+
+/* awal bagian profil hewan */
+.bawah {
+  margin-top: 120px;
+}
+
+/* berita */
+.asep_card {
+  max-width: 1200px; 
+  margin: auto; 
+}
+
+/* kontak */
+
+/* about  */
+.about_us {
+  text-align: center;
+  padding: 180px 10px;
+  background-color: #ffeed3;
+  border-radius: 13px;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* About container styles */
+.tentang-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* About section styles */
+.Tentang {
+  margin-bottom: 40px;
+}
+
+.Tentang h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.Tentang p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Team section styles */
+.team {
+  text-align: center;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 200px;
+}
+
+.team-member img {
+  width: 80%;
+  border-radius: 11px;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Button styles */
+.btn_about {
+  background: linear-gradient(90deg, #b6c0ff 0%, #9daaff 100%);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.btn_about:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(218, 27, 96, 0.5);
+}
+
+/* Definisikan animasi */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+/* Terapkan animasi ke header */
+.about_us h1,
+.about_us p {
+  opacity: 0; 
+  animation: fadeInUp 1.5s ease-out forwards; 
+}
+
+/* Beri delay pada setiap elemen jika diinginkan */
+.about_us h1 {
+  animation-delay: 0.3s;
+}
+
+.about_us p {
+  animation-delay: 0.6s;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Container untuk ikon love */
+.love-icon-container {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  z-index: 10;
+}
+
+/* Tombol love */
+.btn-love {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-love.loved {
+  color: red;
+}
+
+.btn-love:hover {
+  transform: scale(1.2);
+}
+
+/* Animasi */
+@keyframes love-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-love.loved i {
+  animation: love-pulse 0.3s ease-in-out;
+}
+
+/* Tambahkan untuk posisi relatif */
+.pet-card {
+  position: relative;
+}
+
+.bx-heart {
+  font-size: 24px;
+  color: #ff0000; 
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.bx-heart:hover {
+  transform: scale(1.2); 
+  color: #ff6b6b; 
+}
+
+.btn_navbar {
+  display: inline-block;
+  padding: 10px 20px;
+  vertical-align: middle;
+}
+
+.bx-heart {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ngetes love sistem */
+.custom-spacing {
+  margin-top: 120px;
+  padding-top: 100px;
+}
+
+#searchBar {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+#searchBar:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(255, 186, 90, 0.5);
+}
