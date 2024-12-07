@@ -11,10 +11,10 @@ window.onload = function () {
   const urlParams = new URLSearchParams(window.location.search);
   const deskripsiId = urlParams.get('deskripsi');
 
-  // Acak urutan kartu terlebih dahulu
+
   acakKartu();
 
-  // Sembunyikan semua berita dan deskripsi
+
   sembunyikanSemua('deskripsi', 8); 
 
 
@@ -28,37 +28,37 @@ function acakKartu() {
   const container = document.getElementById('cards-container');
   const cards = Array.from(container.children);
   
-  // Mengacak urutan kartu
+
   cards.sort(() => Math.random() - 0.5);
 
-  // Menambahkan kembali kartu yang sudah diacak ke dalam container
+ 
   cards.forEach(card => container.appendChild(card));
 }
 
 
 
-// Function to toggle love button and store data in localStorage
+// Fungsi love di simpan di lokal storage
 function toggleLove(button, id, name, imgSrc) {
-  // Get the saved loves from localStorage
+ 
   let loves = JSON.parse(localStorage.getItem("lovedPets")) || [];
 
-  // Check if the pet is already loved
+  
   const petIndex = loves.findIndex((pet) => pet.id === id);
   if (petIndex > -1) {
-    // Remove pet from loves if it's already saved
+   
     loves.splice(petIndex, 1);
     button.classList.remove("loved");
   } else {
-    // Add pet to loves
+
     loves.push({ id, name, imgSrc });
     button.classList.add("loved");
   }
 
-  // Save the updated loves back to localStorage
+ 
   localStorage.setItem("lovedPets", JSON.stringify(loves));
 }
 
-// Preload loved pets to highlight hearts
+
 document.addEventListener("DOMContentLoaded", () => {
   const loves = JSON.parse(localStorage.getItem("lovedPets")) || [];
   document.querySelectorAll(".btn-love").forEach((button) => {
