@@ -1,12 +1,3 @@
-// navbar
-window.addEventListener('scroll', function () {
-  const navbar = document.querySelector('.asep-navbar');
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
 
 function showDetails(card) {
   // Ambil data dari atribut data-*
@@ -23,7 +14,7 @@ function showDetails(card) {
   document.getElementById('detail-location').innerText = location;
   document.getElementById('detail-contact').innerText = contact;
 
-  // Scroll ke bagian deskripsi (opsional)
+ 
   document.getElementById('description-container').scrollIntoView({ behavior: 'smooth' });
 }
 
@@ -38,21 +29,14 @@ function sembunyikanSemua(prefix, count) {
 
 window.onload = function () {
   const urlParams = new URLSearchParams(window.location.search);
-  const beritaId = urlParams.get('berita');
   const deskripsiId = urlParams.get('deskripsi');
-  const formid = urlParams.get('form');
 
   // Acak urutan kartu terlebih dahulu
   acakKartu();
 
   // Sembunyikan semua berita dan deskripsi
-  sembunyikanSemua('berita', 5); 
   sembunyikanSemua('deskripsi', 8); 
 
-  // Tampilkan berita dan deskripsi yang dipilih
-  if (beritaId && beritaId >= 1 && beritaId <= 5) {
-    document.getElementById(`berita${beritaId}`).classList.remove('hidden');
-  }
 
   if (deskripsiId && deskripsiId >= 1 && deskripsiId <= 8) {
     document.getElementById(`deskripsi${deskripsiId}`).classList.remove('hidden');
