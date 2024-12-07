@@ -1,22 +1,5 @@
 
-function showDetails(card) {
-  // Ambil data dari atribut data-*
-  const title = card.closest('.pet-card').dataset.title;
-  const description = card.closest('.pet-card').dataset.description;
-  const status = card.closest('.pet-card').dataset.status;
-  const location = card.closest('.pet-card').dataset.location;
-  const contact = card.closest('.pet-card').dataset.contact;
 
-  // Ganti konten di area deskripsi
-  document.getElementById('detail-title').innerText = title;
-  document.getElementById('detail-description').innerText = description;
-  document.getElementById('detail-status').innerText = status;
-  document.getElementById('detail-location').innerText = location;
-  document.getElementById('detail-contact').innerText = contact;
-
- 
-  document.getElementById('description-container').scrollIntoView({ behavior: 'smooth' });
-}
 
 function sembunyikanSemua(prefix, count) {
   for (let i = 1; i <= count; i++) {
