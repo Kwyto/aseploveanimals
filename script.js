@@ -1,6 +1,3 @@
-
-
-
 function sembunyikanSemua(prefix, count) {
   for (let i = 1; i <= count; i++) {
     const element = document.getElementById(`${prefix}${i}`);
@@ -38,15 +35,6 @@ function acakKartu() {
   cards.forEach(card => container.appendChild(card));
 }
 
-// Fungsi untuk menyembunyikan elemen berdasarkan prefix dan jumlah
-function sembunyikanSemua(prefix, count) {
-  for (let i = 1; i <= count; i++) {
-    const element = document.getElementById(`${prefix}${i}`);
-    if (element) {
-      element.classList.add('hidden');
-    }
-  }
-}
 
 
 // Function to toggle love button and store data in localStorage
